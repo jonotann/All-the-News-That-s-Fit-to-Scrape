@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+</head>
+
+<body>
+    <nav class="navbar is-transparent">
+
+        <div class="navbar-start is-level">
+            <div class="navbar-item">
+                <p class="control">
+                    <a class="button is-primary" href="/">
+                        <span>Word Scraper</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="navbar-end is-level">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="bd-tw-button button" href="/">
+                            <span class="icon">
+                                <i class="fas fa-home"></i>
+                            </span>
+                            <span>
+                                Home
+                            </span>
+                        </a>
+                    </p>
+                    <p class="control">
+                        <a class="bd-tw-button button" href="/scrape">
+                            <span class="icon">
+                                <i class="far fa-clipboard"></i>
+                            </span>
+                            <span>
+                                Scrape
+                            </span>
+                        </a>
+                    </p>
+                    <p class="control">
+                        <a class="button is-primary" href="/articles">
+                            <span class="icon">
+                                <i class="fas fa-book-open"></i>
+                            </span>
+                            <span>Articles</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <h1>Note's Scraped</h1>
+        <br>
+        <div class="tile is-ancestor">
+            <div id="articles" class="tile is-vertical"></div>
+            <div id="notes"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
