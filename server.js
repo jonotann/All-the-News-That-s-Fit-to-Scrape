@@ -10,7 +10,7 @@ var cheerio = require("cheerio");
 //pulls in all models
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 //initializing express
 var app = express();
@@ -23,7 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 //creates connection for mongoDB
-mongoose.connect("mongodb://localhost/homeworkScrape", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines"
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 //routes
 
